@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dressera - Modern Spor Giyim</title>
+    <meta name="description" content="Dressera - Kaliteli ve şık spor kıyafetler için doğru adres">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Dressera</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="urunlerimiz.html">Ürünlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-custom" href="login.html">Giriş Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-custom" href="register.html">Kayıt Ol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-badge" href="sepet.html">
+                            <i class="bi bi-cart-fill"></i> Sepet
+                            <span id="cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Sporda Yeni Tarz</h1>
+            <p class="hero-subtitle">Kaliteli ve şık kıyafetler ile performansınızı artırın</p>
+            <a href="urunlerimiz.html" class="btn btn-custom hero-btn">Alışverişe Başla</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Kategoriler</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600" alt="Erkek">
+                        <div class="category-overlay">
+                            <span>Erkek</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=600" alt="Kadın">
+                        <div class="category-overlay">
+                            <span>Kadın</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Ayakkabı">
+                        <div class="category-overlay">
+                            <span>Ayakkabı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Ürünler</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="product-image-wrapper">
+                            <span class="product-badge">YENİ</span>
+                            <button class="favorite-btn" onclick="toggleFavorite('product-1')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400" class="product-image" alt="Spor Tişört">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Spor Tişört</h5>
+                            <p class="card-text">Nefes alan kumaş teknolojisi ile maksimum konfor</p>
+                            <p class="product-price">299 TL</p>
+                            <div class="product-actions">
+                                <a href="spor-tisort-detay.html" class="btn btn-custom">Detay</a>
+                                <button class="btn btn-add-cart" onclick="addToCart('product-1', 'Premium Spor Tişört', 299, 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400')">
+                                    <i class="bi bi-cart-plus"></i> Sepete Ekle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="product-image-wrapper">
+                            <span class="product-badge">ÇOK SATAN</span>
+                            <button class="favorite-btn" onclick="toggleFavorite('product-2')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400" class="product-image" alt="Koşu Taytı">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pro Koşu Taytı</h5>
+                            <p class="card-text">Esnek ve dayanıklı yapı ile mükemmel hareket özgürlüğü</p>
+                            <p class="product-price">499 TL</p>
+                            <div class="product-actions">
+                                <a href="kosu-tayti-detay.html" class="btn btn-custom">Detay</a>
+                                <button class="btn btn-add-cart" onclick="addToCart('product-2', 'Pro Koşu Taytı', 499, 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400')">
+                                    <i class="bi bi-cart-plus"></i> Sepete Ekle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card product-card h-100">
+                        <div class="product-image-wrapper">
+                            <span class="product-badge">İNDİRİM</span>
+                            <button class="favorite-btn" onclick="toggleFavorite('product-3')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" class="product-image" alt="Spor Ayakkabı">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ultra Spor Ayakkabı</h5>
+                            <p class="card-text">Hafif ve destekleyici taban teknolojisi</p>
+                            <p class="product-price">799 TL</p>
+                            <div class="product-actions">
+                                <a href="spor-ayakkabi-detay.html" class="btn btn-custom">Detay</a>
+                                <button class="btn btn-add-cart" onclick="addToCart('product-3', 'Ultra Spor Ayakkabı', 799, 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400')">
+                                    <i class="bi bi-cart-plus"></i> Sepete Ekle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Müşteri Yorumları</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Ürünlerin kalitesi harika! Hem şık hem de rahat. Kesinlikle tavsiye ederim."</p>
+                        <p class="testimonial-author">- Ayşe Y.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Hızlı kargo ve mükemmel müşteri hizmeti. Dressera'yı çok sevdim!"</p>
+                        <p class="testimonial-author">- Mehmet K.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Spor yaparken artık kendimi daha iyi hissediyorum. Teşekkürler Dressera!"</p>
+                        <p class="testimonial-author">- Zeynep A.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2 class="newsletter-title">Kampanyalardan Haberdar Olun</h2>
+            <p>E-bültenimize kayıt olun, özel indirimlerden faydalanın!</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" class="newsletter-input" placeholder="E-posta adresiniz" required>
+                <button type="submit" class="btn newsletter-btn">Kayıt Ol</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-section">
+                    <h3 class="footer-title">Dressera</h3>
+                    <p>Kaliteli ve şık spor kıyafetler ile hayatınıza renk katın.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h3 class="footer-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="urunlerimiz.html">Ürünlerimiz</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">İade ve Değişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h3 class="footer-title">İletişim</h3>
+                    <ul class="footer-links">
+                        <li><i class="bi bi-envelope"></i> info@dressera.com</li>
+                        <li><i class="bi bi-phone"></i> +90 535 784 5319</li>
+                        <li><i class="bi bi-geo-alt"></i> İstanbul, Türkiye</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dressera. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function addToCart(id, name, price, image) {
+            const result = shopManager.addToCart({ id, name, price, image });
+            if (result.requiresLogin) {
+                showToast(result.message, 'error');
+                setTimeout(() => window.location.href = 'login.html', 1500);
+            } else {
+                showToast(result.message, 'success');
+            }
+        }
+
+        function toggleFavorite(productId) {
+            const result = shopManager.toggleFavorite(productId);
+            if (result.requiresLogin) {
+                showToast(result.message, 'error');
+                setTimeout(() => window.location.href = 'login.html', 1500);
+            } else {
+                showToast(result.message, result.isFavorite ? 'success' : 'info');
+                const btn = event.target.closest('.favorite-btn');
+                btn.classList.toggle('active');
+            }
+        }
+
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input').value;
+            showToast('E-bültene kayıt oldunuz!', 'success');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
